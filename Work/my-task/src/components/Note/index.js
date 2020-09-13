@@ -7,10 +7,11 @@ const Note = ()  => {
         flex-wrap: wrap;
         padding: 18px 10px;
         border-radius: 5px;
-        max-width: 950px;
+        max-width: 850px;
 
         .text{
             color: #316F01;
+            font-size: 16px;
         }
     `
 

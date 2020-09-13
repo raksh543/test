@@ -1,26 +1,43 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
-import styles from '../styles';
+import styled from 'styled-components';
 
 const Address = () => {
-    const styles = StyleSheet.create({
-        card:{
-            backgroundColor: '#D3D3D3',
-            padding: 10
 
+    const AddrContainer = styled.div`
+        padding: 12px;
+        margin-top: 10px;
+
+        .card{
+            background-color: #F8F8F8;
+            padding: 10px;
         }
-    })
+        .addr{
+            color: #1D1D1D;
+            font-size: 17px;
+            font-family: roboto;
+        }
+        .name{
+            font-size: 20px;
+            font-family: roboto;
+            font-weight: bold;
+        }
+        .head{
+        }
+    `
 
     return(
-        <View style={{padding:12}}>
-            <Text>Delivery address</Text>
+        <AddrContainer>
+            <span className="head">Delivery address</span>
             <br />
-            <View style={styles.card}>
-                <Text style={{fontWeight:'500'}}>Aman Tiwari</Text>
+            <br />
+            <div className="card">
+                <span className="name">Aman Tiwari</span>
                 <br />
-                <Text>BLM tower, 4th floor, sector 44, gurugram, haryana, india</Text>
-            </View>
-        </View>
+                <br />
+                <span className="addr">BLM tower, 4th floor, sector 44, gurugram, haryana, india</span>
+            </div>
+        </AddrContainer>
     )
 };
 

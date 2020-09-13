@@ -8,6 +8,10 @@ const ShareAndEarn =() =>{
     flex-flow: row;
     background-color: #F8F8F8;
     flex-wrap: wrap;
+    max-width: 850px;
+    margin-top: 32px;
+    justify-content: space-around;
+    margin-bottom: 20px;
 
     .heading{
         font-size:24px;
@@ -49,9 +53,9 @@ const ShareAndEarn =() =>{
             </div>
             <div className="content">Share your love for Mamaearth with your friends and get rewarded. Your friends will no doubt fall for our natural & toxin-free range of beauty and baby products.The best part? You can refer as many friends as you want.</div>
             <br/>
-            <button class="referral">LOG IN FOR FREE REFERRAL CODE</button>
+            <button className="referral">LOG IN FOR FREE REFERRAL CODE</button>
             </div>
-            <img src={require("./../../assets/logo.png")} height="200px" width="350px"/>
+            <img src={require("./../../assets/refer_img@2x.png")} height="200px" width="320px"/>
         </ShareEarn>
     )
 }

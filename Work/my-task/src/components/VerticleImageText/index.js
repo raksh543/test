@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import styled from 'styled-components';
 // import ScaledImage from './../ScaledImage';
 // import contentJson from '../../content/home.json';
 
@@ -8,59 +8,69 @@ const VerticleImageText = ({
   title2,
   image ,
   imageSide,
+  imageHover = image,
   imageHeight = 300,
 }) => {
-  const styles = createStyles(imageSide);
+
+  const PlacedContainer = styled.div`
+      align-self:center;
+      // flex: 1,
+      display: flex;
+      align-items: center;
+      flex-flow: ${imageSide === 'down' ? 'column-reverse' : 'column'},
+      flex-wrap: wrap;
+      margin: 1em 0em 0em 0em;
+    
+    .subContainer{
+      flex:1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sectionImage{
+      margin:16px;
+      background: url(${image}) no-repeat;
+      background-position: center;
+      background-size: ${imageHeight};
+    }
+    .sectionImage:hover{
+      margin:16px;
+      background: url(${imageHover}) no-repeat;
+      background-position: center;
+      background-size: ${imageHeight}
+    }
+    .text{
+      color: #103B81;
+      font-size: 14
+      margin-top:10px;
+    }
+    .header{
+      color: #103B81;
+      align-items: center;
+      align-self: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+`
+
+
   return (
-    <View style={styles.container}>
-      <img
-        src={image}
-        height={imageHeight}
-        // style={styles.sectionImage}
-      />
-      <View style={styles.subContainer}>
-        <Text style={styles.header}>{title2}</Text>
-        
-        <Text style={styles.text}>{title3}</Text>
-      </View>
-    </View>
+    <PlacedContainer>
+      <div>
+        <center>
+          <img className="sectionImage"
+          height={imageHeight}
+          width={imageHeight}
+          />
+          <div className="subContainer">
+            {title2 ? <p className="header">{title2}</p> : null}
+            <span className="text">{title3}</span>
+          </div>
+        </center>
+      </div>
+    </PlacedContainer>
   );
 };
 
-const createStyles = (imageSide) =>
-  StyleSheet.create({
-    container: {
-      // flex: 1,
-      alignItems: 'center',
-      flexDirection: imageSide === 'down' ? 'column-reverse' : 'column',
-      flexWrap: 'wrap',
-      marginTop: 16,
-    },
-    subContainer: {
-      flex:1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    sectionImage: {
-      paddingLeft: 16,
-      paddingRight: 16,
-      alignSelf: 'center'
-    },
-    text: {
-      color: '#103B81',
-      alignItems: 'center',
-      alignSelf: 'center',
-      fontSize: 14,
-      marginTop:10
-    },
-    header: {
-      color: '#103B81',
-      alignItems: 'center',
-      alignSelf: 'center',
-      justifyContent: 'center',
-      fontSize: 20,
-      marginTop:10,
-    },
-  });
-
+    
 export default VerticleImageText;
