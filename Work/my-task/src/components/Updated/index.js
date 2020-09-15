@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Updated =() => {
+const Updated =({email, phone}) => {
     const UpdatedStyle = styled.div`
         display: flex;
         flex-direction: column;
@@ -12,6 +12,7 @@ const Updated =() => {
             padding: 18px;
             font-size: 17px;
             color: #1D1D1D;
+            text-align: center;
         }
         .expected{
             color: #6DA523;
@@ -28,8 +29,10 @@ const Updated =() => {
         <UpdatedStyle>
             <span className="heading">We will keep you updated on</span>
             <div style={{display: "flex", flexDirection: "row", alignItems: 'center', marginTop: 10}}>
-                <div className="contactinfo"> email </div>
-                <div className="contactinfo" style={{marginRight: 10}}> phone no </div>
+                <div className="contactinfo">
+                <img src={require("./../../assets/mail@2x.png")} height="20px" width="24px"/> {email} </div>
+                <div className="contactinfo" style={{marginRight: 10}}>
+                <img src={require("./../../assets/chat@2x.png")} height="20px" width="24px"/> {phone} </div>
                 <span className="expected">Delivery expected by 14 July, 2020. </span>
             </div>
         </UpdatedStyle>

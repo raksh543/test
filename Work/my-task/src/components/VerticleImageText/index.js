@@ -10,6 +10,7 @@ const VerticleImageText = ({
   imageSide,
   imageHover = image,
   imageHeight = 300,
+  imageWidth = imageHeight,
 }) => {
 
   const PlacedContainer = styled.div`
@@ -28,28 +29,31 @@ const VerticleImageText = ({
     }
 
     .sectionImage{
-      margin:16px;
-      background: url(${image}) no-repeat;
-      background-position: center;
-      background-size: ${imageHeight};
+      margin-left: 0.7em;
+      margin-right: 0.7em;
+      // background: url(${image}) no-repeat;
+      // background-position: center;
+      // background-size: ${imageHeight};
     }
-    .sectionImage:hover{
-      margin:16px;
-      background: url(${imageHover}) no-repeat;
-      background-position: center;
-      background-size: ${imageHeight}
-    }
+    // .sectionImage:hover{
+    //   margin:16px;
+    //   background: url(${imageHover}) no-repeat;
+    //   background-position: center;
+    //   background-size: ${imageHeight}
+    // }
     .text{
-      color: #103B81;
-      font-size: 14
+      color: #1D1D1D;
+      font-size: 16px;
       margin-top:10px;
+      font-family: roboto;
     }
     .header{
-      color: #103B81;
+      color: #1D1D1D;
       align-items: center;
       align-self: center;
       justify-content: center;
-      font-size: 20px;
+      font-size: 22px;
+      font-family: roboto;
     }
 `
 
@@ -60,7 +64,8 @@ const VerticleImageText = ({
         <center>
           <img className="sectionImage"
           height={imageHeight}
-          width={imageHeight}
+          width={imageWidth}
+          src = {image}
           />
           <div className="subContainer">
             {title2 ? <p className="header">{title2}</p> : null}

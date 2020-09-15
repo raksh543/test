@@ -8,14 +8,15 @@ const TotalSavings = ({saving}) => {
         border: 1px dashed #00AFEF;
         padding-top: 5px;
         padding-bottom: 5px;
+        border-radius: 5px;
 
         .content{
             color: #00AFEF;
         }
 
         .drop{
-            position: absolute;
-            right: 20px;
+            float:right;
+            margin-right: 16px;
             margin-top: 5px;
         }
         .coin{
