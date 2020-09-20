@@ -1,11 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
 import TextLRSection from '../../TextLRSection';
 import styled from 'styled-components';
 
 const OrderSummary = () => {
     const OSContainer = styled.div`
-    
     .desktopOS{
         padding: 16px;
     }

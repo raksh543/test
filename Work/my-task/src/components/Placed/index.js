@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import VerticleImageSection from '../VerticleImageText';
 import styled from 'styled-components';
 
@@ -12,12 +11,12 @@ const Placed = () => {
         background: url(${require("./../../assets/banner_bg@2x.png")});
         justify-content : center;
         align-items:center;
-        padding-bottom: 10px;
+        padding-bottom: 14px;
+        padding-top: 10px;
         @media (max-width: 599px){
             display: none;
         }
     }
-    
     .containerMobile{
         display: none;
         @media (max-width: 599px){
@@ -40,8 +39,8 @@ const Placed = () => {
     return(
         <PlacedContainer>
             <div className="containerWeb">
-                <VerticleImageSection className="desktopView"
-                    title2="ThankYou"
+                <VerticleImageSection 
+                    title2="Thank You"
                     title3= "Your order (Order ID : 123456) has been placed successfully." 
                     image={require("./../../assets/checkmark (1)@2x.png")} 
                     imageHeight={'60px'}
@@ -49,7 +48,7 @@ const Placed = () => {
             </div>
             <div className="containerMobile">
                 <center>
-                    <VerticleImageSection className="mobileView"
+                    <VerticleImageSection 
                         title2="Order Placed"
                         image={require("./../../assets/checkmark (1)@2x.png")} 
                         imageWidth={'40px'}

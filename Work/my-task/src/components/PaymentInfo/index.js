@@ -1,10 +1,8 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import OrderSummary from './OrderSummary';
 import Address from './Address';
 import Cashback from './Cashback';
 import TotalSavings from './TotalSavings';
-import styles from './styles';
 import styled from 'styled-components';
 
 const PaymentInfo = () => {
@@ -48,19 +46,21 @@ const PaymentInfo = () => {
                 </div>
                 <div className="mobilePI">
                     <OrderSummary />
-                    <View
+                    <hr
                         style={{
-                            borderBottomColor: '#F2F9E8',
-                            borderBottomWidth: '5px',
+                            backgroundColor: '#F2F9E8',
+                            height: 5,
+                            border: 'none',
                         }}
-                        />
+                    />
                     <Address />
-                    <View
+                    <hr
                         style={{
-                            borderBottomColor: '#F2F9E8',
-                            borderBottomWidth: '5px',
+                            backgroundColor: '#F2F9E8',
+                            height: 5,
+                            border: 'none',
                         }}
-                        />
+                    />
                 </div>
              
          </PaymentContainer>

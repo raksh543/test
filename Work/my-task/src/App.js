@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import PaymentInfo from './components/PaymentInfo';
 import Placed from './components/Placed';
 import Rating from './components/Rating';
@@ -11,8 +10,6 @@ import styled from 'styled-components';
 
 const App = () => {
     const MyAccountWeb = styled.div`
-        
-        
         .desktop{
             display: block;
             padding: 20px;
@@ -27,6 +24,7 @@ const App = () => {
         }
         .mobile{
             display: none;
+            margin-bottom: 16px;
             @media (max-width: 599px){
                 display: block;
             }
@@ -79,21 +77,21 @@ const App = () => {
                     <Placed />
                     <PaymentInfo />
                     <Cashback />
-                    <View
+                    <hr
                         style={{
-                            borderBottomColor: '#F2F9E8',
-                            borderBottomWidth: '5px',
+                            backgroundColor: '#F2F9E8',
+                            height: 5,
+                            border: 'none',
                         }}
-                        />
+                    />
                     <Rating />
-                    <View
+                    <hr
                         style={{
-                            borderBottomColor: '#F2F9E8',
-                            borderBottomWidth: '5px',
+                            backgroundColor: '#F2F9E8',
+                            height: 5,
+                            border: 'none',
                         }}
-                        />
-                        
-                        <ShareAndEarn />
+                    />
                     
             </div>
         </MyAccountWeb>

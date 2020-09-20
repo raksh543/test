@@ -1,8 +1,23 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import styled from 'styled-components';
 
 const TextLRSection = ({textL, textR, colorR='black', sizeR=14}) => {
 
+    const LRContainer = styled.div`
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        width: 100%;
+        align-self: center;
+        margin-top: 12px;
+        .left{
+            align-self: flex-start;
+        }
+        .right{
+            align-self: flex-end;
+        }
+    `
     const styles = StyleSheet.create({
         container:{
             flex: 1,

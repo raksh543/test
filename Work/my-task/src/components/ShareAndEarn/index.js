@@ -17,7 +17,6 @@ const ShareAndEarn =() =>{
         font-size:24px;
         color: #5C5C5C;
         font-family: CoconOT;
-
     }
     .work{
         color: #00AFEF;
