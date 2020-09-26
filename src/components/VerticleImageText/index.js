@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import ScaledImage from './../ScaledImage';
 // import contentJson from '../../content/home.json';
+import './../../index.css';
 
 const VerticleImageText = ({
   title3,
@@ -20,7 +21,7 @@ const VerticleImageText = ({
       align-items: center;
       flex-flow: ${imageSide === 'down' ? 'column-reverse' : 'column'},
       flex-wrap: wrap;
-      margin: 1em 0em 0em 0em;
+      margin: 1rem 0rem 0rem 0rem;
     
     .subContainer{
       flex:1;
@@ -29,14 +30,14 @@ const VerticleImageText = ({
     }
 
     .sectionImage{
-      margin-left: 0.7em;
-      margin-right: 0.7em;
+      margin-left: 0.7rem;
+      margin-right: 0.7rem;
       // background: url(${image}) no-repeat;
       // background-position: center;
       // background-size: ${imageHeight};
     }
     // .sectionImage:hover{
-    //   margin:16px;
+    //   margin:1rem;
     //   background: url(${imageHover}) no-repeat;
     //   background-position: center;
     //   background-size: ${imageHeight}
@@ -44,16 +45,17 @@ const VerticleImageText = ({
     .text{
       color: #1D1D1D;
       font-size: 16px;
-      margin-top:10px;
-      font-family: roboto;
+      margin-top:0.625rem;
+      // font-family: roboto;
+      font-family: Roboto-Regular;
     }
     .header{
       color: #1D1D1D;
       align-items: center;
       align-self: center;
       justify-content: center;
-      font-size: 22px;
-      font-family: roboto;
+      font-size: 1.375rem;
+      font-family: Roboto-Medium;
     }
 `
 

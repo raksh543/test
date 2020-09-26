@@ -10,7 +10,7 @@ const TextLRSection = ({textL, textR, colorR='black', sizeR=14}) => {
         flex-direction: row;
         width: 100%;
         align-self: center;
-        margin-top: 12px;
+        margin-top: 0.75rem;
         .left{
             align-self: flex-start;
         }

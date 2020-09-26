@@ -15,10 +15,10 @@ const Cashback = () => {
     `
     return(
         <CashbackConatiner>
-            <img src={require("./../../assets/Wallet@2x.png")} className="CBimg" width="30px" height="30px"/>
+            <img src={require("./../../assets/Wallet.png")} className="CBimg" width="30px" height="30px"/>
             <div>
-                Your 100 Cashback on this order <br />
-                Will be credited after return period is over
+                <span style={{fontSize: '0.875rem'}}>Your ₹ 100 Cashback on this order</span> <br />
+                <span style={{fontSize: '0.625rem', marginTop:'1rem'}}>Will be credited after return period is over</span>
             </div>
             <img className="CBimg" src={require("./../../assets/Icon material-navigate-next@2x.png")} width="8px" height="12px" />
         </CashbackConatiner>

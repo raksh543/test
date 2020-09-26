@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: local('Roboto-Medium'), url(./fonts/Roboto-Medium.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: local('Roboto-Regular'), url(./fonts/Roboto-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Cocon-Regular-Font';
+    src: local('Cocon-Regular-Font'), url(./fonts/Cocon-Regular-Font.otf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Roboto-Bold';
+    src: local('Roboto-Bold'), url(./fonts/Roboto-Bold.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Roboto-Medium';
+    src: local('Roboto-Medium'), url(./fonts/Roboto-Medium.ttf) format('truetype');
+  }
+
+
+/* body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "PT Sans", "Expletus Sans",
+      "Josefin Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+      "Fira Sans", "Droid Sans", "Helvetica Neue", "SF Display", sans-serif,
+      cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  
+  @media only screen and (min-width: 800px) {
+    body {
+      overflow: auto;
+    }
+  }
+  
+  @font-face {
+    font-family: "SF Display";
+    font-weight: 400;
+    src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  
+  .main-scroll {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .main-scroll-chat {
+    width: 100%;
+    height: 100vh;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 0;
+    background-color: #fff;
+    background-size: cover;
+  }
+  
+  .main-scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  
+  .job-listing-mobile-view {
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    overflow: scroll;
+    background: #fff;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .job-listing-mobile-view::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+  
+  .signin-mobile-view {
+    overflow: scroll;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    background-color: #fff;
+    background-size: cover;
+  }
+  
+  .bgLayout {
+    background: #fff;
+    background-size: cover;
+  }
+   */
