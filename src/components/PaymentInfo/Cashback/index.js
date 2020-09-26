@@ -8,10 +8,11 @@ const Cashback = ({cashback}) => {
     width: 100%;
     padding-top: 0.5rem;
     padding-bottom:0.5rem;
+    margin-top: 1rem;
 
     .content{
         font-size: 0.9375rem;
-        font-family: roboto;
+        font-family: Roboto-Regular;
     }
     `
 

@@ -19,19 +19,28 @@ const Address = () => {
         .addr{
             color: #1D1D1D;
             font-size: 1.0625rem;
-            font-family: roboto;
+            font-family: Roboto-Regular;
+            line-height: 1.6rem;
         }
         .name{
             font-size: 1.25 rem;
-            font-family: roboto;
-            font-weight: bold;
+            font-family: Roboto-Bold;
+            // font-weight: bold;
         }
         .head{
             color: #5C5C5C;
             font-size: 1rem;
+            font-family: Roboto-Regular;
         }
         .addrLabel{
             float: right;
+            font-family: Roboto-Bold;
+            border-color: #989898;
+            border-radius: 5px
+        }
+        .others{
+            font-family: Roboto-Medium;
+            font-size: 1rem;
         }
 
         @media (max-width: 599px){
@@ -47,6 +56,8 @@ const Address = () => {
                 margin: 1rem;
                 padding: 0.75rem;
                 border-radius: 5px;
+                font-family: Roboto-Regular;
+                color: #1D1D1D
             }
             .head{
                 margin-left: 1.125rem;
@@ -70,10 +81,12 @@ const Address = () => {
             </div>
             <div className="mobileAddr">
                 <span className="head">Delivery address</span>
+                
                 <div className="info">
-                <span className="addr">BLM tower, 4th floor, sector 44, gurugram, haryana, india</span><br /><br />
-                <span className="m_name">Aman Tiwari</span><br /><br />
-                <span classNmae="m_phone">9999412563</span><br /><br />
+                <span className="others">Others</span><br /><br />
+                <span className="addr">BLM tower, 4th floor, sector 44, gurugram, haryana, india</span><br />
+                <p >Aman Tiwari</p>
+                <span classNmae="m_phone">9999412563</span><br />
                 </div>
             </div>
         </AddrContainer>

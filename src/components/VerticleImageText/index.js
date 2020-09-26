@@ -70,7 +70,7 @@ const VerticleImageText = ({
           src = {image}
           />
           <div className="subContainer">
-            {title2 ? <p className="header">{title2}</p> : null}
+            {title2 ? <div style={{paddingTop: '0.75rem', paddingBottom: '0.75rem'}}><span className="header">{title2}<br /></span></div> : null}
             <span className="text">{title3}</span>
           </div>
         </center>

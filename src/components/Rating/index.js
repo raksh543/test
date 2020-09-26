@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import VerticleImageText from '../VerticleImageText';
 import styled from 'styled-components';
+import './../../index.css';
 const Rating = () => {
 
     const [isHoverOne, setIsHoverOne] = useState("blank");
@@ -12,6 +13,8 @@ const Rating = () => {
 
     const RatingContainer = styled.div`
     padding-bottom: 1rem;
+    font-family: Roboto-Regular;
+
     padding-top: 1rem;
         .container{
             display: flex;
@@ -24,7 +27,12 @@ const Rating = () => {
             flex: 1;
             align-self: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: 1.125rem;
+            color: #5C5C5C;
+        }
+        .container span{
+            color: #1D1D1D;
+            font-size: 0.825rem;
         }
         .section{
             display: flex;
