@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import './../../index.css';
 
 const Note = ()  => {
     const Note = styled.div`
@@ -12,6 +13,8 @@ const Note = ()  => {
         .text{
             color: #316F01;
             font-size: 1rem;
+            font-family: Roboto-Regular;
+            line-height: 1.6rem;
         }
     `
 

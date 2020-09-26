@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import styled from 'styled-components';
+import './../../index.css';
 
 const TextLRSection = ({textL, textR, colorR='black', sizeR=14}) => {
 
@@ -13,9 +14,12 @@ const TextLRSection = ({textL, textR, colorR='black', sizeR=14}) => {
         margin-top: 0.75rem;
         .left{
             align-self: flex-start;
+            font-family: Roboto-Regular;
+            color: #5C5C5C;
         }
         .right{
             align-self: flex-end;
+            font-family: Roboto-Medium;
         }
     `
     const styles = StyleSheet.create({
@@ -28,7 +32,9 @@ const TextLRSection = ({textL, textR, colorR='black', sizeR=14}) => {
         },
         textleft: {
             alignSelf: 'flex-start',
-            fontSize: 14
+            fontSize: 14,
+            fontFamily: 'Roboto-Regular',
+            color:'#5C5C5C',
         },
         textright: {
             alignSelf: 'flex-end',
@@ -36,7 +42,8 @@ const TextLRSection = ({textL, textR, colorR='black', sizeR=14}) => {
             right: 0,
             color: colorR,
             fontSize: sizeR,
-            fontWeight: '500'
+            // fontWeight: '500',
+            fontFamily: 'Roboto-Medium'
         },
     })
 

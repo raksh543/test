@@ -32,6 +32,7 @@ const ShareAndEarn =() =>{
         margin-bottom: 1.375rem;
         max-width: 31.25rem;
         font-family: Roboto-Regular;
+        line-height: 1.6rem;
     }
     .referral{
         padding: 1rem 3.125rem;

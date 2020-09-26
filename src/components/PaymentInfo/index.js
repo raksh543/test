@@ -4,6 +4,7 @@ import Address from './Address';
 import Cashback from './Cashback';
 import TotalSavings from './TotalSavings';
 import styled from 'styled-components';
+import './../../index.css'
 
 const PaymentInfo = () => {
     const PaymentContainer = styled.div`
@@ -15,12 +16,13 @@ const PaymentInfo = () => {
         border-radius: 0.3125rem;
     }
     .textPI{
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         background-color: #5C5C5C;
         color: white;
-        padding: 0.375rem;
+        padding: 0.75rem 0.75rem;
         border-top-left-radius: 0.3125rem;
         border-top-right-radius: 0.3125rem;
+        font-family: Roboto-Regular;
     }
     .mobilePI{
         display: none;

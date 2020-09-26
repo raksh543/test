@@ -1,6 +1,7 @@
 import React from 'react';
 import TextLRSection from '../../TextLRSection';
 import styled from 'styled-components';
+import './../../../index.css';
 
 const OrderSummary = () => {
     const OSContainer = styled.div`
@@ -29,6 +30,7 @@ const OrderSummary = () => {
             margin-right: 1.5rem;
             color: #00AFEF;
             font-size: 0.75rem;
+            font-family: Roboto-Regular;
         }
     }
     `
@@ -36,13 +38,13 @@ const OrderSummary = () => {
     return(
         <OSContainer>
             <div className="desktopOS">
-                <TextLRSection textL="Order ID" textR="Rs 1479.00"/>
-                <TextLRSection textL="Items Discount" textR="-Rs 1479.00" colorR="red"/>
-                <TextLRSection textL="Sub Total" textR="Rs 1479.00"/>
-                <TextLRSection textL="Coupons discount" textR="-Rs 1479.00" colorR="red"/>
-                <TextLRSection textL="shipping Charges" textR="Rs 1479.00"/>
-                <TextLRSection textL="Mamapay credit" textR="-Rs 1479.00" colorR="red"/>
-                <TextLRSection textL="Total" textR="Rs 1479.00" sizeR={20}/>
+                <TextLRSection textL="Order ID" textR="₹ 1479.00"/>
+                <TextLRSection textL="Items Discount" textR="-₹ 1479.00" colorR="red"/>
+                <TextLRSection textL="Sub Total" textR="₹ 1479.00"/>
+                <TextLRSection textL="Coupons discount" textR="-₹ 1479.00" colorR="red"/>
+                <TextLRSection textL="shipping Charges" textR="₹ 1479.00"/>
+                <TextLRSection textL="Mamapay credit" textR="-₹ 1479.00" colorR="red"/>
+                <TextLRSection textL="Total" textR="₹ 1479.00" sizeR={20}/>
             </div>
             <div className="mobileOS">
                 <div className="summary">

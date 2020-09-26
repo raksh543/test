@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import './../../index.css'
 
-const Updated =({email, phone}) => {
+const Updated = ({ email, phone }) => {
     const UpdatedStyle = styled.div`
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
+        font-family: Roboto-Regular;
 
         .contactinfo{
             border: 1px solid #DBDBDB;
@@ -14,7 +15,12 @@ const Updated =({email, phone}) => {
             font-size: 1.0625rem;
             color: #1D1D1D;
             text-align: center;
-            font-family: Roboto-Regular;
+            display: flex;
+            flex-direction:row;
+            
+        }
+        .contactinfo span{
+            margin-left: 0.5rem;
         }
         .expected{
             color: #6DA523;
@@ -22,19 +28,22 @@ const Updated =({email, phone}) => {
         }
         .heading{
             font-size: 1.125rem;
-            font-family: roboto;
             color: #5C5C5C;
         }
     `
 
-    return(
+    return (
         <UpdatedStyle>
             <span className="heading">We will keep you updated on</span>
-            <div style={{display: "flex", flexDirection: "row", alignItems: 'center', marginTop: 10}}>
-                <div className="contactinfo">
-                <img src={require("./../../assets/mail@2x.png")} height="20px" width="24px"/> {email} </div>
-                <div className="contactinfo" style={{marginRight: 10}}>
-                <img src={require("./../../assets/chat@2x.png")} height="20px" width="24px"/> {phone} </div>
+            <div style={{ display: "flex", flexDirection: "row", alignItems: 'center', marginTop: 10 }}>
+                <div className="contactinfo" style={{ borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}>
+                    <img src={require("./../../assets/mail@2x.png")} height="20px" width="24px" />
+                    <span>{email} </span>
+                </div>
+                <div className="contactinfo" style={{ borderTopRightRadius: '5px', borderBottomRightRadius: '5px', marginRight: '1rem' }}>
+                    <img src={require("./../../assets/chat@2x.png")} height="20px" width="24px" />
+                    <span>{phone} </span>
+                </div>
                 <span className="expected">Delivery expected by 14 July, 2020. </span>
             </div>
         </UpdatedStyle>
