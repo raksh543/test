@@ -8,11 +8,12 @@ const Placed = () => {
         display: flex;
         flex:1;
         width: 100%;
-        background: url(${require("./../../assets/banner_bg@2x.png")});
+        background: url(${require("./../../assets/banner_bg.png")});
+        background-size: 81.87rem 12.5rem;
         justify-content : center;
         align-items:center;
-        padding-bottom: 14px;
-        padding-top: 10px;
+        padding-bottom: 0.875rem;
+        padding-top: 0.625rem;
         @media (max-width: 599px){
             display: none;
         }
@@ -20,7 +21,7 @@ const Placed = () => {
     .containerMobile{
         display: none;
         @media (max-width: 599px){
-            margin-top: 30px;
+            margin-top: 1.875rem;
             display: block;
             display: flex;
             flex:1;

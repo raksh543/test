@@ -9,18 +9,18 @@ const PaymentInfo = () => {
     const PaymentContainer = styled.div`
     
     .desktopPI{
-        width: 400px;
-        margin-bottom: 32px;
+        width: 25rem;
+        margin-bottom: 2rem;
         border: 1px solid #e3e3e3;
-        border-radius: 5px;
+        border-radius: 0.3125rem;
     }
     .textPI{
-        font-size: 20px;
+        font-size: 1.25rem;
         background-color: #5C5C5C;
         color: white;
-        padding: 6px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        padding: 0.375rem;
+        border-top-left-radius: 0.3125rem;
+        border-top-right-radius: 0.3125rem;
     }
     .mobilePI{
         display: none;

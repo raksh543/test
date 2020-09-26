@@ -6,29 +6,29 @@ const Address = () => {
     const AddrContainer = styled.div`
         
         .desktopAddr{
-            padding: 12px;
-            margin-top: 10px;
+            padding: 0.75rem;
+            margin-top: 0.625rem;
         }
         .mobileAddr{
             display: none;
         }
         .card{
             background-color: #F8F8F8;
-            padding: 10px;
+            padding: 0.625rem;
         }
         .addr{
             color: #1D1D1D;
-            font-size: 17px;
+            font-size: 1.0625rem;
             font-family: roboto;
         }
         .name{
-            font-size: 20px;
+            font-size: 1.25 rem;
             font-family: roboto;
             font-weight: bold;
         }
         .head{
             color: #5C5C5C;
-            font-size: 16px;
+            font-size: 1rem;
         }
         .addrLabel{
             float: right;
@@ -40,16 +40,16 @@ const Address = () => {
             }
             .mobileAddr{
                 display: block;
-                margin-top: 16px;
+                margin-top: 1 rem;
             }
             .info{
                 border: 1px solid #e3e3e3;
-                margin: 16px;
-                padding: 12px;
+                margin: 1rem;
+                padding: 0.75rem;
                 border-radius: 5px;
             }
             .head{
-                margin-left: 18px;
+                margin-left: 1.125rem;
             }
         }
     `

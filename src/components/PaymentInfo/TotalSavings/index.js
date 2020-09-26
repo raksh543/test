@@ -3,12 +3,12 @@ import styled from 'styled-components';
 
 const TotalSavings = ({saving}) => {
     const TSContainer=  styled.div`
-        margin:8px;
+        margin:0.5rem;
         background-color: #00AFEF1A;
         border: 1px dashed #00AFEF;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        border-radius: 5px;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        border-radius: 0.3125rem;
 
         .content{
             color: #00AFEF;
@@ -16,13 +16,13 @@ const TotalSavings = ({saving}) => {
 
         .drop{
             float:right;
-            margin-right: 16px;
-            margin-top: 5px;
+            margin-right: 1rem;
+            margin-top: 0.3125rem;
         }
         .coin{
-            margin-top: 5px;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-top: 0.3125rem;
+            margin-left: 0.625rem;
+            margin-right: 0.625rem;
         }
     `
     return(

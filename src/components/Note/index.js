@@ -5,13 +5,13 @@ const Note = ()  => {
     const Note = styled.div`
         background-color: #F2F9E8;
         flex-wrap: wrap;
-        padding: 18px 10px;
+        padding: 1.125em 0.625em;
         border-radius: 5px;
         max-width: 850px;
 
         .text{
             color: #316F01;
-            font-size: 16px;
+            font-size: 1rem;
         }
     `
 

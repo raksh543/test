@@ -1,25 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import './../../index.css'
 
 const Updated =({email, phone}) => {
     const UpdatedStyle = styled.div`
         display: flex;
         flex-direction: column;
-        margin-top: 32px;
+        margin-top: 2rem;
 
         .contactinfo{
             border: 1px solid #DBDBDB;
-            padding: 18px;
-            font-size: 17px;
+            padding: 1.0125rem;
+            font-size: 1.0625rem;
             color: #1D1D1D;
             text-align: center;
+            font-family: Roboto-Regular;
         }
         .expected{
             color: #6DA523;
-            font-size: 15px;
+            font-size: 0.9375rem;
         }
         .heading{
-            font-size: 18px;
+            font-size: 1.125rem;
             font-family: roboto;
             color: #5C5C5C;
         }

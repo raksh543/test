@@ -1,45 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
+import './../../index.css'
 
 const ShareAndEarn =() =>{
     const ShareEarn = styled.div`
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     flex-flow: row;
     background-color: #F8F8F8;
     flex-wrap: wrap;
-    max-width: 850px;
-    margin-top: 32px;
+    max-width: 53.125rem;
+    margin-top: 2rem;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 
     .heading{
-        font-size:24px;
+        font-size:1.5rem;
         color: #5C5C5C;
-        font-family: CoconOT;
+        font-family: Cocon-Regular-Font;
     }
     .work{
         color: #00AFEF;
-        font-size: 17px;
-        margin-left: 24px;
+        font-size: 1.0625rem;
+        margin-left: 1.5rem;
+        font-family: Roboto-Medium;
     }
     .content{
-        font-size: 16px;
+        font-size: 1rem;
         color: #5C5C5C;
-        margin-top: 22px;
-        margin-bottom: 22px;
-        max-width: 500px
+        margin-top: 1.375rem;
+        margin-bottom: 1.375rem;
+        max-width: 31.25rem;
+        font-family: Roboto-Regular;
     }
     .referral{
-        padding: 16px 50px;
+        padding: 1rem 3.125rem;
         background-color: #00AFEF;
         border-radius: 5px;
         border: 0px;
         color: white;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-family: roboto;
         pointer: cursor;
-        margin-bottom: 22px;
+        margin-bottom: 1.375rem;
+        font-family: Roboto-Medium;
     }
     `
 
