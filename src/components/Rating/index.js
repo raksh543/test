@@ -1,16 +1,15 @@
 // content: url(${require("./../../assets/Wallet@2x.png")})
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import VerticleImageText from '../VerticleImageText';
 import styled from 'styled-components';
 import './../../index.css';
+import Popup from './Popup';
+
 const Rating = () => {
 
-    const [isHoverOne, setIsHoverOne] = useState("blank");
-    const [isHoverTwo, setIsHoverTwo] = useState("blank");
-    const [isHoverThree, setIsHoverThree] = useState("blank");
-    const [isHoverFour, setIsHoverFour] = useState("blank");
-    const [isHoverFive, setIsHoverFive] = useState("blank");
+    const [open, setOpen] = useState(false);
 
+    // render() {
     const RatingContainer = styled.div`
     padding-bottom: 1rem;
     font-family: Roboto-Regular;
@@ -43,6 +42,7 @@ const Rating = () => {
             font-size: 1rem;
             align-items: center;
             margin: 1rem 0rem;
+            cursor: pointer;
         }
         @media (max-width: 1467px) {
             .section img{
@@ -96,60 +96,48 @@ const Rating = () => {
 
     `
 
-    return(
+    return (
         <RatingContainer>
             <center>
                 <span className="text"> How was your buying experience?</span>
             </center>
             <div className="container">
-                <div className="section" >
+
+                <div className="section" onClick={() => setOpen(true)}>
                     <img className="terrible" />
                     <span>Terrible</span>
                 </div>
 
-                <div className="section" >
+                <div className="section" onClick={() => setOpen(true)}>
                     <img className="bad" />
                     <span>Bad</span>
                 </div>
 
-                <div className="section" >
+                <div className="section" onClick={() => setOpen(true)}>
                     <img className="ok" />
                     <span>Ok</span>
                 </div>
 
-                <div className="section" >
+                <div className="section" onClick={() => setOpen(true)}>
                     <img className="good" />
                     <span>Good</span>
                 </div>
 
-                <div className="section" >
+                <div className="section" onClick={() => setOpen(true)}>
                     <img className="great" />
                     <span>Great</span>
                 </div>
-                
-                {/* <div onMouseOver={()=>setIsHoverOne("fill")} onMouseOut={()=>setIsHoverOne("blank")} style={{padding:0}}>
-                <VerticleImageText 
-                    title3="Terrible" 
-                    image={require("./../../assets/Terrible_"+isHoverOne+"@2x.png")} 
-                    imageHeight={50} 
-                    onClick={()=>console.log("yes")}
-                />
-                </div>
-                <div onMouseOver={()=>setIsHoverTwo("fill")} onMouseOut={()=>setIsHoverTwo("blank")} style={{padding:0}}>
-                <VerticleImageText title3="Bad" className="rate" image= {require("./../../assets/bad_"+isHoverTwo+"@2x.png")} imageHover={require("./../../assets/bad_hover.svg")} imageHeight={50} />
-                </div>
-                <div onMouseOver={()=>setIsHoverThree("fill")} onMouseOut={()=>setIsHoverThree("blank")} style={{padding:0}}>                
-                <VerticleImageText title3="Ok" image={require("./../../assets/ok_"+isHoverThree+"@2x.png")} imageHeight={50} />
-                </div>
-                <div onMouseOver={()=>setIsHoverFour("fill")} onMouseOut={()=>setIsHoverFour("blank")} style={{padding:0}}>
-                <VerticleImageText title3="Good" image={require("./../../assets/good_"+isHoverFour+"@2x.png")} imageHeight={50} />
-                </div>
-                <div onMouseOver={()=>setIsHoverFive("fill")} onMouseOut={()=>setIsHoverFive("blank")} style={{padding:0}}>
-                <VerticleImageText title3="Great" image={require("./../../assets/great_"+isHoverFive+"@2x.png")} imageHeight={50} />
-                </div> */}
+                <Popup
+                    openPopup={open} 
+                    setOpenPopup = {setOpen}
+                    title ={"Reviews"}
+                    content ={"Please share your experience and feedback."}/>
+
             </div>
         </RatingContainer>
+
     )
 }
+// }
 
 export default Rating;
