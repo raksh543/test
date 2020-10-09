@@ -9,7 +9,6 @@ const Rating = () => {
 
     const [open, setOpen] = useState(false);
 
-    // render() {
     const RatingContainer = styled.div`
     padding-bottom: 1rem;
     font-family: Roboto-Regular;
@@ -113,17 +112,17 @@ const Rating = () => {
                     <span>Bad</span>
                 </div>
 
-                <div className="section" onClick={() => setOpen(true)}>
+                <div className="section">
                     <img className="ok" />
                     <span>Ok</span>
                 </div>
 
-                <div className="section" onClick={() => setOpen(true)}>
+                <div className="section">
                     <img className="good" />
                     <span>Good</span>
                 </div>
 
-                <div className="section" onClick={() => setOpen(true)}>
+                <div className="section">
                     <img className="great" />
                     <span>Great</span>
                 </div>
@@ -138,6 +137,5 @@ const Rating = () => {
 
     )
 }
-// }
 
 export default Rating;
