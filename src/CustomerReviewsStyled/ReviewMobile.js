@@ -24,7 +24,10 @@ const Avatar = styled.img`
 `;
 const Review = styled.div`
     margin: 1rem 1rem;
-
+    box-sizing: border-box;
+    * {
+        box-sizing: border-box;
+      };
     .buttonHeader {
         display: flex;
         justify-content: space-between;

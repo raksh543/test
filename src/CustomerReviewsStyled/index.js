@@ -54,6 +54,7 @@ export default function CustomerReviews() {
     const ReviewsContainerMobile = styled.div`
         display: none;
         margin-bottom: 0;
+        box-sizing: border-box;
         @media (max-width: 599px){
             display: block;
         };
@@ -61,7 +62,7 @@ export default function CustomerReviews() {
             display: flex;
             flex: 1;
             justify-content: space-between;
-            margin: 1rem 0;
+            margin: .09rem 0;
         };
     `
     return (
@@ -185,6 +186,12 @@ export default function CustomerReviews() {
 
 
         <ReviewsContainerMobile>
+        <img src={require('./../assets/Coupon/Group10329.svg')} width='100%' />
+                <div style={{ fontFamily: 'Roboto-Regular', fontSize: '0.85rem', color: '#989898', marginTop: '1rem' }}>
+                    <center>
+                    Total :<span style={{ fontFamily: 'Roboto-Bold', fontSize: '1rem', color: '#5C5C5C', marginLeft: '3px' }}>1,942 Reviews</span>
+                    </center>
+                </div>
         <div className="buttonHeader">
                     <Button
                         style={{ color: '#5C5C5C', border: '1px solid #EAEAEA', fontSize: '14px', fontFamily: 'Roboto-Bold', textTransform: 'none' }}
