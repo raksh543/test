@@ -9,7 +9,7 @@ const CouponsPageStyled = () => {
             display: flex;
             flex:1;
             box-sizing: border-box;
-            margin: 0;
+            margin: 0 2vw;
         },
         .heading{
             font-family: Cocon-Regular-Font;
@@ -22,8 +22,10 @@ const CouponsPageStyled = () => {
         .container{
             display: flex;
             flex-direction: column;
+            margin-top: 1rem;
         },
         .row{
+            width: 100%;
             display: flex;
             flex: 1;
             flex-wrap: wrap;
