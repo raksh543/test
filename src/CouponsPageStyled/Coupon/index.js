@@ -4,6 +4,11 @@ import './../../index.css';
 
 export default function Coupon({ imgSrc, Height, Width, title, content, moreContent }) {
     const Coupon = styled.div`
+    margin: 0 1rem 1rem 1rem;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    padding: 8px 0;
+
     .paper {
         padding: 1rem;
         text-align: center;
@@ -12,14 +17,11 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
         display: flex;
         flex-direction: row;
         align-items: center;
-        border: 1px solid #EAEAEA;
-        border-radius: 5px;
     },
     .title {
         font-size: 1.125rem;
         color: #989898;
         font-family: Roboto-Regular;
-        paddingBottom: 0.5rem;
     },
     .pos {
         margin-bottom: 12;
@@ -30,25 +32,18 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
     },
     .body {
         font-size: 1rem;
-        fontFamily: Roboto-Regular;
+        font-family: Roboto-Regular;
         color: #1D1D1D;
-    },
-    .more {
-        font-size: 1rem;
-        color: #00AFEF;
-        fontFamily: Roboto-Medium;
-        paddingTop: 0.5rem;
+        line-height: 1.2;
     },
     .moreContent {
         font-size: 0.75rem;
         font-family: Roboto-Medium;
-        margin-top: 0.75rem;
         color: #5C5C5C;
     },
     `
 
     const Button = styled.button`
-        /* Adapt the colors based on primary prop */
         background: white;
         cursor: pointer;
         border: 0px;
@@ -64,16 +59,17 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
     return (
         <Coupon>
             <div className="root">
-                <img src={imgSrc} style={{ maxWidth: Width, maxHeight: Height, margin: '1rem' }} />
-
-                <div style={{ maxWidth: '16.25rem', margin: '1rem 0rem' }}>
+                <img src={imgSrc} style={{ maxWidth: Width, maxHeight: Height,display: 'flex',  flex:1, justifyContent: 'flex-start' }} />
+                <div style={{ maxWidth: '15rem', margin: '1rem 1vw', display: 'flex', flex:1, flexDirection: 'column' }}>
                     <div className="title" >
                         {title}
                     </div>
-                    <div className="body">
+                    <br />
+                    <span className="body">
                         {content}
-                    </div>
-                    {showMore == false ? <Button className="more" onClick={() => setShowMore(true)}> + More</Button>
+                    </span>
+                    <br />
+                    {showMore == false ? <span style={{fontSize: '1rem', color: '#00AFEF', fontFamily: 'Roboto-Medium',  cursor: 'pointer'}} onClick={() => setShowMore(true)}> + More</span>
                         :
                         <div className="moreContent">
                             Terms and Conditions
@@ -86,10 +82,10 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
                     <img
                         src={require('./../../assets/Coupon/CopyCode.svg')}
                         onClick={() => setShowCode(true)}
-                        style={{ maxWidth: '210px', margin: '1rem', cursor: 'pointer' }}
+                        style={{ maxWidth: '210px', cursor: 'pointer',  display:'flex',flex:1 }}
                     />
                     :
-                    <img src={require('./../../assets/Coupon/Path14172.svg')} style={{ maxWidth: '210px', margin: '1rem' }} />
+                    <img src={require('./../../assets/Coupon/Path14172.svg')} style={{ maxWidth: '210px',display: 'flex',  flex:1, justifyContent: 'flex-end' }} />
                 }
             </div>
 
