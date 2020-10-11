@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import StarRating from './StarRating';
-import IconStar from './StarRating/IconStar'
 
 export default function Review({name, date, rating, newPrice, oldPrice, discount}) {
     const Review = styled.div`
@@ -23,7 +22,7 @@ export default function Review({name, date, rating, newPrice, oldPrice, discount
     .customerInfo {
         display: flex;
         flex-direction: row;
-        padding: 1rem;
+        padding: 1rem 0;
     };
     .infoOne {
         display: flex;
@@ -52,8 +51,8 @@ export default function Review({name, date, rating, newPrice, oldPrice, discount
     `
     const Button = styled.button`
     cursor: pointer;
-    font-family: Roboto-Medium;
-    font-size: 1rem;
+    font-family: Roboto-Bold;
+    font-size: 14px;
     color: #00AFEF;
     border: 1px solid #D4D4D4;
     border-radius: 5px; 
@@ -76,10 +75,10 @@ export default function Review({name, date, rating, newPrice, oldPrice, discount
                     <Avatar alt="Remy Sharp" src={require('./../assets/Coupon/istockphoto-614507060-612x612.png')} />
                     <div style={{ margin: '0 15px', alignItems: 'center' }}>
                         <div className="infoOne">
-                            <div style={{ flex: 1, fontFamily: 'Roboto-Medium', fontSize: '0.95rem', color: '#1D1D1D', minWidth: '100px', maxWidth: '150px' }}>
+                            <div style={{ fontFamily: 'Roboto-Medium', fontSize: '0.95rem', color: '#1D1D1D' }}>
                                 {name}
                                 </div>
-                            <div style={{ flex: 1, fontFamily: 'Roboto-Regular', fontSize: '0.75rem', color: '#5C5C5C', marginLeft: '15px' }}>
+                            <div style={{ fontFamily: 'Roboto-Regular', fontSize: '0.75rem', color: '#5C5C5C', marginLeft: '15px' }}>
                                 {date}
                                 </div>
                         </div>
@@ -92,16 +91,16 @@ export default function Review({name, date, rating, newPrice, oldPrice, discount
                         </div>
                     </div>
                 </div>
-                <div style={{ fontFamily: 'Roboto-Regular', fontSize: '0.95rem', color: '#5C5C5C', padding: '0 1rem' }}>
+                <div style={{ fontFamily: 'Roboto-Regular', fontSize: '0.8rem', color: '#5C5C5C'}}>
                     Its really very good to use. It gives a fair and radiant skin & also lighten the hyperpigmentation. Must try!
                     </div>
                 <div className="card">
-                    <img src={require('./../assets/Coupon/ubtan-face-scrub_1-2.png')} style={{ maxHeight: '130px' }} />
+                    <img src={require('./../assets/Coupon/ubtan-face-scrub_1-2.png')} style={{ maxHeight: '100px' }} />
                     <div className="details">
-                        <div style={{ fontFamily: 'Roboto-Regular', fontSize: '16px', color: '#3D3D3D' }}>
+                        <div style={{ fontFamily: 'Roboto-Regular', fontSize: '14px', color: '#3D3D3D' }}>
                             Skin Illuminate Face Serum for Radiant Skin with...
                             </div>
-                        <div style={{ display: 'flex', flexDirection: 'row', margin: '10px 0', justifyContent: 'space-around', }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', margin: '10px 1rem 10px 0', justifyContent: 'space-between', }}>
                             <div style={{ fontFamily: 'Roboto-Medium', color: '#1D1D1D', fontSize: '16px' }}>₹{newPrice}</div>
                             <div style={{ fontFamily: 'Roboto-Regular', color: '#B4B4B4', fontSize: '14px', textDecoration: 'line-through', marginLeft: '5px' }}>
                                 ₹{oldPrice}
@@ -110,12 +109,12 @@ export default function Review({name, date, rating, newPrice, oldPrice, discount
                                 ({discount}% Off)
                                 </div>
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                            <div style={{ color: 'white', display: 'flex', flexDirection: 'row', alignItems: 'center', backgroundColor: '#6DA523', borderRadius: '5px', padding: '3px 5px 3px 8px' }}>
-                                <span style={{ color: 'white', fontFamily: 'Roboto-Bold', fontSize: '1rem', marginRight: '2px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '10px' }}>
+                            <div style={{ color: 'white', display: 'flex', flexDirection: 'row', alignItems: 'center', backgroundColor: '#6DA523', borderRadius: '5px', padding: '4px 9px 4px 9px' }}>
+                                <span style={{ color: 'white', fontFamily: 'Roboto-Bold', fontSize: '14px', marginRight: '4px' }}>
                                     {rating}
                                     </span>
-                                <IconStar />
+                                    <img src={require('./../assets/Coupon/star.svg')} height="12px" />
                             </div>
                             <Button>
                                 ADD TO CART

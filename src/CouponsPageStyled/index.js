@@ -1,16 +1,24 @@
 import React from 'react';
 import Coupon from './Coupon';
+import CouponMobile from './CouponMobile'
 import styled from 'styled-components';
 import './../index.css';
 
 const CouponsPageStyled = () => {
     const CouponContainer = styled.div`
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: 0 5vw;
+        @media (max-width: 599px){
+            display: none;
+        };
         .root {
             display: flex;
             flex:1;
             box-sizing: border-box;
             margin: 0 2vw;
-        },
+        };
         .heading{
             font-family: Cocon-Regular-Font;
             font-size: 2rem;
@@ -18,14 +26,13 @@ const CouponsPageStyled = () => {
             color: #1D1D1D;
             flex-wrap: wrap;
             margin: 1.5rem;
-        },
+        };
         .container{
             display: flex;
             flex-direction: column;
             margin-top: 1rem;
-        },
+        };
         .row{
-            width: 100%;
             display: flex;
             flex: 1;
             flex-wrap: wrap;
@@ -33,66 +40,132 @@ const CouponsPageStyled = () => {
             box-sizing: border-box;
             margin: 0;
             justify-content: space-around;
-        }
-    `
+        };
+    `;
+    const CouponContainerMobile = styled.div`
+        display: flex;
+        flex-direction: column;
+        display: none;
+        margin: 1rem 0;
+        box-sizing: border-box;
+        @media (max-width: 599px){
+            display: block;
+        };
+        `;
     return (
-        <CouponContainer>
-            <div className="heading"><center>AVAILABLE COUPONS</center></div>
-            <div className="container">
-                <div className="row">
+        <div>
+            <CouponContainer>
+                <div className="heading"><center>AVAILABLE COUPONS</center></div>
+                <div className="container">
+                    <div className="row">
 
-                    <Coupon
-                        imgSrc={require('./../assets/Coupon/mastercard.png')}
-                        Height={'50px'}
-                        Width={'85px'}
-                        title={'Get 30% off using Mastercard'}
-                        content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                        moreContent={'Terms and Conditions'}
-                    />
-                    <Coupon
-                        imgSrc={require('./../assets/Coupon/hdfc.png')}
-                        Height={'100px'}
-                        Width={'85px'}
-                        title={'Get 30% off using Mastercard'}
-                        content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                    />
-                </div>
-                <div className="row">
-                    <Coupon
-                        imgSrc={require('./../assets/Coupon/kotak.png')}
-                        Height={'110px'}
-                        Width={'85px'}
-                        title={'Get 30% off using Mastercard'}
-                        content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                    />
-                    <Coupon
-                        imgSrc={require('./../assets/Coupon/icici.png')}
-                        Height={'74px'}
-                        Width={'85px'}
-                        title={'Get 30% off using Mastercard'}
-                        content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                    />
-                </div>
-                <div className="row">
-                    <Coupon
-                        imgSrc={require('./../assets/Coupon/axis.png')}
-                        Height={'110px'}
-                        Width={'85px'}
-                        title={'Get 30% off using Mastercard'}
-                        content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                    />
-                    <Coupon
-                        imgSrc={require('./../assets/Coupon/sbi.png')}
-                        Height={'74px'}
-                        Width={'85px'}
-                        title={'Get 30% off using Mastercard'}
-                        content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                    />
+                        <Coupon
+                            imgSrc={require('./../assets/Coupon/mastercard.png')}
+                            Height={'50px'}
+                            Width={'85px'}
+                            title={'Get 30% off using Mastercard'}
+                            content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                            moreContent={'Terms and Conditions'}
+                        />
+                        <Coupon
+                            imgSrc={require('./../assets/Coupon/hdfc.png')}
+                            Height={'100px'}
+                            Width={'85px'}
+                            title={'Get 30% off using Mastercard'}
+                            content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                        />
+                    </div>
+                    <div className="row">
+                        <Coupon
+                            imgSrc={require('./../assets/Coupon/kotak.png')}
+                            Height={'110px'}
+                            Width={'85px'}
+                            title={'Get 30% off using Mastercard'}
+                            content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                        />
+                        <Coupon
+                            imgSrc={require('./../assets/Coupon/icici.png')}
+                            Height={'74px'}
+                            Width={'85px'}
+                            title={'Get 30% off using Mastercard'}
+                            content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                        />
+                    </div>
+                    <div className="row">
+                        <Coupon
+                            imgSrc={require('./../assets/Coupon/axis.png')}
+                            Height={'110px'}
+                            Width={'85px'}
+                            title={'Get 30% off using Mastercard'}
+                            content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                        />
+                        <Coupon
+                            imgSrc={require('./../assets/Coupon/sbi.png')}
+                            Height={'74px'}
+                            Width={'85px'}
+                            title={'Get 30% off using Mastercard'}
+                            content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                        />
 
+                    </div>
                 </div>
-            </div>
 
-        </CouponContainer>
+            </CouponContainer>
+            <CouponContainerMobile>
+                <CouponMobile
+                    title={'Get 30% off using Mastercard'}
+                    content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                />
+                <hr
+                    style={{
+                        color: '#EAEAEA',
+                        backgroundColor: '#EAEAEA',
+                        border: '0px',
+                        height: 1,
+                        margin: '1rem 0'
+                    }}
+                />
+                <CouponMobile
+                    title={'Get 30% off using Mastercard'}
+                    content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                />
+                <hr
+                    style={{
+                        color: '#EAEAEA',
+                        backgroundColor: '#EAEAEA',
+                        border: '0px',
+                        height: 1,
+                        margin: '1rem 0'
+                    }}
+                />
+                <CouponMobile
+                    title={'Get 30% off using Mastercard'}
+                    content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                />
+                <hr
+                    style={{
+                        color: '#EAEAEA',
+                        backgroundColor: '#EAEAEA',
+                        border: '0px',
+                        height: 1,
+                        margin: '1rem 0'
+                    }}
+                />
+                <CouponMobile
+                    title={'Get 30% off using Mastercard'}
+                    content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                />
+                <hr
+                    style={{
+                        color: '#EAEAEA',
+                        backgroundColor: '#EAEAEA',
+                        border: '0px',
+                        height: 1,
+                        margin: '1rem 0'
+                    }}
+                />
+            </CouponContainerMobile>
+        </div>
     )
 };
 
