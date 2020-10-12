@@ -58,7 +58,7 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
                 <div className="shape">
                     MASTERCARD100
                 </div>
-                {showCode == false ?
+                {showCode === false ?
                     <div
                         onClick={() => setShowCode(true)} 
                         style={{color: '#00AFEF', fontSize: '14px', fontFamily: 'Roboto-Medium', padding: '12px 26px', border: '1px solid #EAEAEA', borderRadius: '5px'}}>
@@ -78,7 +78,7 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
                 <span className="body">
                     {content}
                 </span>
-                {showMore == false ? 
+                {showMore === false ? 
                     <span 
                         style={{fontSize: '1rem', color: '#00AFEF', fontFamily: 'Roboto-Medium',  cursor: 'pointer', marginTop: '8px'}} 
                         onClick={() => setShowMore(true)}>

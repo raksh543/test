@@ -7,7 +7,7 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
     margin: 0 0 1rem 0;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
-    padding: 8px 0;
+    padding: 8px 1.5rem;
     max-width: 630px;
 
     .paper {
@@ -60,8 +60,8 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
     return (
         <Coupon>
             <div className="root">
-                <img src={imgSrc} style={{ maxWidth: Width, maxHeight: Height,display: 'flex',  flex:1, justifyContent: 'flex-start' }} />
-                <div style={{ maxWidth: '15rem', margin: '1rem 1vw', display: 'flex', flex:1, flexDirection: 'column' }}>
+                <img src={imgSrc} style={{ maxWidth: Width, maxHeight: Height, display: 'flex', flex: 1, justifyContent: 'flex-start' }} />
+                <div style={{ maxWidth: '15rem', margin: '1rem 1vw', display: 'flex', flex: 1, flexDirection: 'column' }}>
                     <div className="title" >
                         {title}
                     </div>
@@ -70,23 +70,28 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
                         {content}
                     </span>
                     <br />
-                    {showMore == false ? <span style={{fontSize: '1rem', color: '#00AFEF', fontFamily: 'Roboto-Medium',  cursor: 'pointer'}} onClick={() => setShowMore(true)}> + More</span>
+                    {showMore === false ? <span style={{ fontSize: '1rem', color: '#00AFEF', fontFamily: 'Roboto-Medium', cursor: 'pointer' }} onClick={() => setShowMore(true)}> + More</span>
                         :
                         <div className="moreContent">
-                            Terms and Conditions
-                        <br />
-                            {moreContent}
+                            <span style={{color: '#5c5c5c'}}>Terms and Conditions</span>
+                        <div style={{display: 'flex',alignItems: 'center'}}>
+                            <span style={{fontSize: '25px', marginRight: '8px', color: '#1d1d1d'}}>•</span> <span> {moreContent}</span>
+                        </div>                            
                         </div>
                     }
                 </div>
-                {showCode == false ?
+                {showCode === false ?
                     <img
                         src={require('./../../assets/Coupon/CopyCode.svg')}
                         onClick={() => setShowCode(true)}
-                        style={{ maxWidth: '210px', cursor: 'pointer',  display:'flex',flex:1 }}
+                        style={{ maxWidth: '210px', cursor: 'pointer', display: 'flex', flex: 1 }}
                     />
                     :
-                    <img src={require('./../../assets/Coupon/Path14172.svg')} style={{ maxWidth: '210px',display: 'flex',  flex:1, justifyContent: 'flex-end' }} />
+                    <div style={{height: '52.5px',border: '1px solid #eaeaea', borderRadius: '5px', display: 'flex', flexDirection: 'row', color: '#6DA523', fontSize: '16px', fontFamily: 'Roboto-Medium', width: '210px', alignItems: 'center', justifyContent: 'center'}}>
+                            <img src={require('./../../assets/Coupon/copied.svg')} height='17px' />
+                            <span style={{ marginLeft: '5px' }}>Copied</span>
+                       
+                    </div>
                 }
             </div>
 

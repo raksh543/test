@@ -10,8 +10,10 @@ import {
 } from "react-router-dom";
 
 const App2 = () => {
-        return (
-            <Router>
+    return (
+        <Router>
+
+            <Switch>
                 <Route path="/reviews">
                     <CustomerReviewsStyled />
                 </Route>
@@ -21,8 +23,10 @@ const App2 = () => {
                 <Route path="/faqs">
                     <FAQsStyled />
                 </Route>
-            </Router>
-        );
+            </Switch>
+        </Router>
+
+    );
 }
 
 export default App2;
