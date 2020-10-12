@@ -1,9 +1,6 @@
 import React from 'react';
-import CouponsPage from './CouponsPage';
 import CouponsPageStyled from './CouponsPageStyled';
-import FAQsPage from './FAQsPage';
 import FAQsStyled from './FAQsStyled';
-import CustomerReviews from './CustomerReviews';
 import CustomerReviewsStyled from './CustomerReviewsStyled';
 import {
     BrowserRouter as Router,
@@ -15,7 +12,7 @@ import {
 const App2 = () => {
         return (
             <Router>
-                <Route path="/reviews">
+                <Route path="/">
                     <CustomerReviewsStyled />
                 </Route>
                 <Route path="/coupons">
