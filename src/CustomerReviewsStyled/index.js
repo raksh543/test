@@ -33,7 +33,7 @@ export default function CustomerReviews() {
         flex-direction: row;
         flex-wrap: wrap;
         box-sizing: border-box;
-        justify-content: space-around;
+        justify-content: space-between;
     };
     
     
@@ -94,8 +94,8 @@ export default function CustomerReviews() {
                     <Button
                         style={{ color: '#00AFEF', fontSize: '14px', fontFamily: 'Roboto-Medium', textTransform: 'none' }}
                     >
-                        <img style={{ marginRight: '0.75rem' }} src={require('./../assets/Coupon/awesome-sort-amount-down-alt.svg')} />
-                        Most Helpful
+                        <span style={{ marginRight: '0.50rem' }}>Most Helpful</span>
+                        <img src={require('./../assets/Coupon/awesome-sort-amount-down-alt.svg')} height="14px" />
                     </Button>
                 </div>
                 <div className="row">

@@ -4,10 +4,11 @@ import './../../index.css';
 
 export default function Coupon({ imgSrc, Height, Width, title, content, moreContent }) {
     const Coupon = styled.div`
-    margin: 0 1rem 1rem 1rem;
+    margin: 0 0 1rem 0;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
     padding: 8px 0;
+    max-width: 630px;
 
     .paper {
         padding: 1rem;
