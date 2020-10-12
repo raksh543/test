@@ -17,7 +17,6 @@ const CouponsPageStyled = () => {
             display: flex;
             flex:1;
             box-sizing: border-box;
-            margin: 0 2vw;
         };
         .heading{
             font-family: Cocon-Regular-Font;
@@ -35,6 +34,7 @@ const CouponsPageStyled = () => {
         .row{
             display: flex;
             flex: 1;
+            wodth: 100%;
             flex-wrap: wrap;
             flex-direction: row;
             box-sizing: border-box;
@@ -56,16 +56,14 @@ const CouponsPageStyled = () => {
         <div>
             <CouponContainer>
                 <div className="heading"><center>AVAILABLE COUPONS</center></div>
-                <div className="container">
                     <div className="row">
-
                         <Coupon
                             imgSrc={require('./../assets/Coupon/mastercard.png')}
                             Height={'50px'}
                             Width={'85px'}
                             title={'Get 30% off using Mastercard'}
                             content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                            moreContent={'Terms and Conditions'}
+                            moreContent={'Coupon code can be applied only once'}
                         />
                         <Coupon
                             imgSrc={require('./../assets/Coupon/hdfc.png')}
@@ -73,6 +71,7 @@ const CouponsPageStyled = () => {
                             Width={'85px'}
                             title={'Get 30% off using Mastercard'}
                             content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                            moreContent={'Terms and Conditions'}
                         />
                     </div>
                     <div className="row">
@@ -82,6 +81,7 @@ const CouponsPageStyled = () => {
                             Width={'85px'}
                             title={'Get 30% off using Mastercard'}
                             content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                            moreContent={'Terms and Conditions'}
                         />
                         <Coupon
                             imgSrc={require('./../assets/Coupon/icici.png')}
@@ -89,6 +89,7 @@ const CouponsPageStyled = () => {
                             Width={'85px'}
                             title={'Get 30% off using Mastercard'}
                             content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                            moreContent={'Terms and Conditions'}
                         />
                     </div>
                     <div className="row">
@@ -98,6 +99,7 @@ const CouponsPageStyled = () => {
                             Width={'85px'}
                             title={'Get 30% off using Mastercard'}
                             content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                            moreContent={'Terms and Conditions'}
                         />
                         <Coupon
                             imgSrc={require('./../assets/Coupon/sbi.png')}
@@ -105,9 +107,9 @@ const CouponsPageStyled = () => {
                             Width={'85px'}
                             title={'Get 30% off using Mastercard'}
                             content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
+                            moreContent={'Terms and Conditions'}
                         />
 
-                    </div>
                 </div>
 
             </CouponContainer>
