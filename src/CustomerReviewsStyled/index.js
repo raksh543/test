@@ -33,7 +33,7 @@ export default function CustomerReviews() {
         flex-direction: row;
         flex-wrap: wrap;
         box-sizing: border-box;
-        justify-content: space-between;
+        justify-content: space-around;
     };
     
     
@@ -71,7 +71,8 @@ export default function CustomerReviews() {
             <div className="root">
                 <img src={require('./../assets/Coupon/Group10329.png')} width='100%' />
             </div>
-            <div style={{ padding: '1rem 10vw' }}>
+            <div style={{ padding: '1rem 5vw' }}>
+            <div style={{ padding: '0 4vw' }}>
                 <div style={{ fontFamily: 'Roboto-Regular', fontSize: '0.85rem', color: '#989898' }}>
                     Total :<span style={{ fontFamily: 'Roboto-Bold', fontSize: '1rem', color: '#5C5C5C', marginLeft: '3px' }}>1,942 Reviews</span>
                 </div>
@@ -97,6 +98,7 @@ export default function CustomerReviews() {
                         <span style={{ marginRight: '0.50rem' }}>Most Helpful</span>
                         <img src={require('./../assets/Coupon/awesome-sort-amount-down-alt.svg')} height="14px" />
                     </Button>
+                </div>
                 </div>
                 <div className="row">
                         <Review 
@@ -203,8 +205,9 @@ export default function CustomerReviews() {
                     <Button
                         style={{ color: '#00AFEF', fontSize: '14px', fontFamily: 'Roboto-Medium', textTransform: 'none' }}
                     >
-                        <img style={{ marginRight: '0.75rem' }} src={require('./../assets/Coupon/awesome-sort-amount-down-alt.svg')} />
-                        Most Helpful
+                        
+                        <span style={{ marginRight: '0.55rem' }} >Most Helpful </span>
+                        <img src={require('./../assets/Coupon/awesome-sort-amount-down-alt.svg')}  height="14px"/>
                     </Button>
                 </div>
 
