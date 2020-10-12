@@ -113,7 +113,7 @@ const CouponsPageStyled = () => {
             </CouponContainer>
             <CouponContainerMobile>
                 <CouponMobile
-                    title={'Get 30% off using Mastercard'}
+                    title={'Get 30% off'}
                     content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
                 />
                 <hr

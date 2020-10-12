@@ -4,7 +4,7 @@ import './../../index.css';
 
 export default function CouponMobile({ imgSrc, Height, Width, title, content, moreContent }) {
     const Coupon = styled.div`
-    padding: 8px 18px;
+    padding: 8px 18px 0 18px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -18,8 +18,8 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
         font-size: 0.9rem;
         font-family: Roboto-Regular;
         color: #1D1D1D;
-        line-height: 1.2;
-        padding-right: 5rem;
+        line-height: 1.4;
+        padding-right: 4.5rem;
         margin-top: 8px;
     };
     .moreContent {
@@ -28,17 +28,14 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
         color: #1D1D1D;
         margin-top: 8px;
     };
-    .moreContent li{
-        padding-top: 8px;
-        margin: 0;
-    };
     .shape {
-        border: 1px solid #7BD0F5;
-        background-color: #E0F4FD;
-        padding: 10px 20px;
+        padding: 10px 20px 15px 20px;
         color: #1D1D1D;
         font-size: 16px;
         font-family: Roboto-Medium;
+        background-image: url(${require('./../../assets/Coupon/coupon_bg.svg')});
+        background-size: contain;
+        background-repeat: no-repeat;
       };
     `;
 
@@ -68,8 +65,8 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
                         Copy 
                     </div>
                     :
-                    <div style={{color: '#6DA523', fontSize: '14px', fontFamily: 'Roboto-Medium', padding: '12px 26px', alignItems: 'center'}}>
-                        <img src={require('./../../assets/Coupon/tickincircle.svg')}  height='18px' />
+                    <div style={{display: 'flex', flexDirection: 'row',color: '#6DA523', fontSize: '14px', fontFamily: 'Roboto-Medium', padding: '12px 26px', alignItems: 'center'}}>
+                        <img src={require('./../../assets/Coupon/copied.svg')}  height='15px' />
                         <span style={{marginLeft: '5px'}}>Copied</span>
                     </div>
                 }
@@ -90,7 +87,6 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
                     :
                     <div className="moreContent">
                         <span style={{color: '#989898'}}>Terms and Conditions</span>
-                        <br />
                         <div style={{display: 'flex',alignItems: 'center'}}>
                             <span style={{fontSize: '25px', marginRight: '8px', color: '#5C5C5C'}}>•</span> <span> Terms and Conditions</span>
                         </div>
@@ -102,9 +98,7 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
                         </div>
                         <div style={{display: 'flex',alignItems: 'center'}}>
                             <span style={{fontSize: '25px', marginRight: '8px', color: '#5C5C5C'}}>•</span> <span> Terms and Conditions</span>
-                        </div>                           
-                    <br />
-                        {moreContent}
+                        </div>       
                     </div>
                 }
             </div>

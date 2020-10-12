@@ -12,10 +12,10 @@ import {
 const App2 = () => {
         return (
             <Router>
-                <Route path="/">
+                <Route path="/reviews">
                     <CustomerReviewsStyled />
                 </Route>
-                <Route path="/coupons">
+                <Route path="/">
                     <CouponsPageStyled />
                 </Route>
                 <Route path="/faqs">
