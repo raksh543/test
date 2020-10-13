@@ -4,44 +4,36 @@ import './../../index.css';
 
 export default function Coupon({ imgSrc, Height, Width, title, content, moreContent }) {
     const Coupon = styled.div`
-    margin: 0 0 1rem 0;
+    margin: 0 0.5rem 1rem 0.5rem;
     border: 1px solid #EAEAEA;
     border-radius: 5px;
     padding: 8px 1.5rem;
-    max-width: 630px;
+    max-width: 610px;
+    display: flex;
+    flex-direction: column;
 
-    .paper {
-        padding: 1rem;
-        text-align: center;
-    },
     .root{
         display: flex;
         flex-direction: row;
         align-items: center;
-    },
+    };
     .title {
-        font-size: 1.125rem;
+        font-size: 1.025rem;
         color: #989898;
         font-family: Roboto-Regular;
-    },
-    .pos {
-        margin-bottom: 12;
-    },
-    .cover {
-        width: 200;
-        height: 150;
-    },
+    };
     .body {
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-family: Roboto-Regular;
         color: #1D1D1D;
         line-height: 1.2;
-    },
+    };
     .moreContent {
         font-size: 0.75rem;
         font-family: Roboto-Medium;
         color: #5C5C5C;
-    },
+        padding-left:10px;
+    };
     `
 
     const Button = styled.button`
@@ -69,32 +61,33 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
                     <span className="body">
                         {content}
                     </span>
-                    <br />
-                    {showMore === false ? <span style={{ fontSize: '1rem', color: '#00AFEF', fontFamily: 'Roboto-Medium', cursor: 'pointer' }} onClick={() => setShowMore(true)}> + More</span>
-                        :
-                        <div className="moreContent">
-                            <span style={{color: '#5c5c5c'}}>Terms and Conditions</span>
-                        <div style={{display: 'flex',alignItems: 'center'}}>
-                            <span style={{fontSize: '25px', marginRight: '8px', color: '#1d1d1d'}}>•</span> <span> {moreContent}</span>
-                        </div>                            
-                        </div>
-                    }
+
                 </div>
                 {showCode === false ?
                     <img
                         src={require('./../../assets/Coupon/CopyCode.svg')}
                         onClick={() => setShowCode(true)}
-                        style={{ maxWidth: '210px', cursor: 'pointer', display: 'flex', flex: 1 }}
+                        style={{ maxWidth: '200px', cursor: 'pointer', display: 'flex', flex: 1 }}
                     />
                     :
-                    <div style={{height: '52.5px',border: '1px solid #eaeaea', borderRadius: '5px', display: 'flex', flexDirection: 'row', color: '#6DA523', fontSize: '16px', fontFamily: 'Roboto-Medium', width: '210px', alignItems: 'center', justifyContent: 'center'}}>
-                            <img src={require('./../../assets/Coupon/copied.svg')} height='17px' />
-                            <span style={{ marginLeft: '5px' }}>Copied</span>
-                       
+                    <div style={{ height: '50px', width: '200px', border: '1px solid #eaeaea', borderRadius: '5px', display: 'flex', flexDirection: 'row', color: '#6DA523', fontSize: '14px', fontFamily: 'Roboto-Medium', alignItems: 'center', justifyContent: 'center' }}>
+                        <img src={require('./../../assets/Coupon/copied.svg')} height='17px' />
+                        <span style={{ marginLeft: '5px' }}>Copied</span>
+
                     </div>
                 }
             </div>
-
+            <div style={{marginLeft: Width}}>
+            {showMore === false ? <span style={{ paddingLeft:'10px', fontSize: '1rem', color: '#00AFEF', fontFamily: 'Roboto-Medium', cursor: 'pointer' }} onClick={() => setShowMore(true)}> + More</span>
+                :
+                <div className="moreContent">
+                    <span style={{ color: '#5c5c5c' }}>Terms and Conditions</span>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <span style={{ fontSize: '25px', marginRight: '8px', color: '#1d1d1d' }}>•</span> <span> {moreContent}</span>
+                    </div>
+                </div>
+            }
+            </div>
         </Coupon>
     );
 }

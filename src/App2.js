@@ -20,7 +20,7 @@ const App2 = () => {
                 <Route path="/">
                     <CouponsPageStyled />
                 </Route>
-                <Route path="/faqs">
+                <Route path="/faq">
                     <FAQsStyled />
                 </Route>
             </Switch>
