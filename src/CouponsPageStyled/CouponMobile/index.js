@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import './../../index.css';
 
-export default function CouponMobile({ imgSrc, Height, Width, title, content, moreContent }) {
+export default function CouponMobile({ title, content, moreContent }) {
     const Coupon = styled.div`
     padding: 8px 18px 0 18px;
     box-sizing: border-box;
