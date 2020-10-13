@@ -22,6 +22,24 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
         padding-right: 4.5rem;
         margin-top: 8px;
     };
+    .copy{
+        color: #00AFEF; 
+        font-size: 14px; 
+        font-family: Roboto-Medium; 
+        padding: 12px 26px;
+        border: 1px solid #EAEAEA; 
+        border-radius: 5px;
+        cursor: pointer;
+    };
+    .copied{
+        display: flex; 
+        flex-direction: row;
+        color: #6DA523;
+        font-size: 14px;
+        font-family: Roboto-Medium; 
+        padding: 12px 8px; 
+        align-items: center;
+    };
     .moreContent {
         font-size: 0.85rem;
         font-family: Roboto-Regular;
@@ -61,11 +79,11 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
                 {showCode === false ?
                     <div
                         onClick={() => setShowCode(true)} 
-                        style={{color: '#00AFEF', fontSize: '14px', fontFamily: 'Roboto-Medium', padding: '12px 26px', border: '1px solid #EAEAEA', borderRadius: '5px'}}>
+                        className="copy">
                         Copy 
                     </div>
                     :
-                    <div style={{display: 'flex', flexDirection: 'row',color: '#6DA523', fontSize: '14px', fontFamily: 'Roboto-Medium', padding: '12px 26px', alignItems: 'center'}}>
+                    <div className="copied">
                         <img src={require('./../../assets/Coupon/copied.svg')}  height='15px' />
                         <span style={{marginLeft: '5px'}}>Copied</span>
                     </div>
@@ -86,6 +104,11 @@ export default function CouponMobile({ imgSrc, Height, Width, title, content, mo
                     </span>
                     :
                     <div className="moreContent">
+                    <span
+                        style={{fontSize: '1rem', color: '#00AFEF', fontFamily: 'Roboto-Medium',  cursor: 'pointer', marginTop: '8px'}}  
+                        className="less" 
+                        onClick={() => setShowMore(false)}> - Hide
+                    </span><br /><br />
                         <span style={{color: '#989898'}}>Terms and Conditions</span>
                         <div style={{display: 'flex',alignItems: 'center'}}>
                             <span style={{fontSize: '25px', marginRight: '8px', color: '#5C5C5C'}}>•</span> <span> Terms and Conditions</span>
