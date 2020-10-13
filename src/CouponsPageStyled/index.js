@@ -56,6 +56,13 @@ const CouponsPageStyled = () => {
         @media (max-width: 599px){
             display: block;
         };
+        .hr{
+            color: #EAEAEA;
+            background-color: #EAEAEA;
+            border: 0px;
+            height: 1;
+            margin: 1rem 0;
+        };
         `;
     return (
         <div>
@@ -69,7 +76,7 @@ const CouponsPageStyled = () => {
                             Width={'85px'}
                             title={'Get 30% off using Mastercard'}
                             content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
-                            moreContent={'Coupon code can be applied only once'}
+                            moreContent={'Code can be applied only once'}
                         />
                         <Coupon
                             imgSrc={require('./../assets/Coupon/hdfc.png')}
@@ -122,54 +129,22 @@ const CouponsPageStyled = () => {
                     title={'Get 30% off'}
                     content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
                 />
-                <hr
-                    style={{
-                        color: '#EAEAEA',
-                        backgroundColor: '#EAEAEA',
-                        border: '0px',
-                        height: 1,
-                        margin: '1rem 0'
-                    }}
-                />
+                <hr className="hr" />
                 <CouponMobile
                     title={'Get 30% off using Mastercard'}
                     content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
                 />
-                <hr
-                    style={{
-                        color: '#EAEAEA',
-                        backgroundColor: '#EAEAEA',
-                        border: '0px',
-                        height: 1,
-                        margin: '1rem 0'
-                    }}
-                />
+                <hr className="hr" />
                 <CouponMobile
                     title={'Get 30% off using Mastercard'}
                     content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
                 />
-                <hr
-                    style={{
-                        color: '#EAEAEA',
-                        backgroundColor: '#EAEAEA',
-                        border: '0px',
-                        height: 1,
-                        margin: '1rem 0'
-                    }}
-                />
+                <hr className="hr" />
                 <CouponMobile
                     title={'Get 30% off using Mastercard'}
                     content={'Use code MASTERCARD100 & get 30% off to Rs.100 on your 2 products above Rs.99'}
                 />
-                <hr
-                    style={{
-                        color: '#EAEAEA',
-                        backgroundColor: '#EAEAEA',
-                        border: '0px',
-                        height: 1,
-                        margin: '1rem 0'
-                    }}
-                />
+                <hr className="hr" />
             </CouponContainerMobile>
         </div>
     )

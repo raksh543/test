@@ -118,19 +118,19 @@ export default function Coupon({ imgSrc, Height, Width, title, content, moreCont
                     <span className="less" onClick={() => setShowMore(false)}> - Hide</span><br /><br />
                         <span style={{ color: '#5c5c5c' }}>Terms and Conditions</span>
                         <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            <div style={{ display: 'flex', flexDirection: 'column', flex:1 }}>
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', flex:1}}>
+                                <div style={{ display: 'flex', alignItems: 'center', paddingRight: '2rem'  }}>
                                     <span style={{ fontSize: '25px', marginRight: '8px', color: '#1d1d1d' }}>•</span> <span> {moreContent}</span>
                                 </div>
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', paddingRight: '2rem'  }}>
                                     <span style={{ fontSize: '25px', marginRight: '8px', color: '#1d1d1d' }}>•</span> <span> {moreContent}</span>
                                 </div>
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', flex:1 }}>
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', flex:1, paddingRight: '2rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', paddingRight: '2rem'  }}>
                                     <span style={{ fontSize: '25px', marginRight: '8px', color: '#1d1d1d' }}>•</span> <span> {moreContent}</span>
                                 </div>
-                                <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', paddingRight: '2rem'  }}>
                                     <span style={{ fontSize: '25px', marginRight: '8px', color: '#1d1d1d' }}>•</span> <span> {moreContent}</span>
                                 </div>
                             </div>
